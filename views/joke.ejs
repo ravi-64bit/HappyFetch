@@ -1,13 +1,85 @@
 <!DOCTYPE html>
-    <head>
-        <Title>
-            Random Joke
-        </Title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke</title>
+
+    <!-- Link to the local Bootstrap .386 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+    <style>
+        /* Retro terminal styling */
+        body {
+            background-color: #0000aa;
+            color: #ffffff;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        h1 {
+            color: #00ffff;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .joke-box {
+            background-color: #002b80;
+            border: 2px solid #00ffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 70%;
+            text-align: center;
+        }
+
+        .joke-box h5 {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .btn-joke {
+            display: inline-block;
+            background-color: #33ccff;
+            border: 2px solid #000000;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .btn-joke:hover {
+            background-color: #00ffff;
+            border-color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <header>
         <h1>Here's a random <%=type%> joke for you</h1>
-        <h5><%=joke%></h5>
-        <a href="/darkjoke">Click for a dark joke</a><br>
-        <a href="/progjoke">click here for a programming joke</a>
-    </body>
+    </header>
+
+    <div class="joke-box">
+        <h5><%= joke %></h5>
+    </div>
+
+    <div class="text-center">
+        <a href="/darkjoke" class="btn-joke">Click for a Dark Joke</a>
+        <a href="/progjoke" class="btn-joke">Click for a Programming Joke</a>
+        <a href="/dadjoke" class="btn-joke">Click for a dad joke</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Random Joke Funhouse</p>
+    </footer>
+
+    <!-- Link to the local Bootstrap .386 JS file (optional) -->
+    <script src="/js/bootstrap.min.js"></script>
+</body>
 </html>

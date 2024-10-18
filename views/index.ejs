@@ -1,17 +1,112 @@
 <!DOCTYPE html>
-    <head>
-        <title>Fun API Collection</title>
-        <link rel="stylesheet" href="public/css/styles.css">
-    </head>
-    <body>
-        <h1>
-            Welcome to my fun API collection Mr. <%=name%>
-        </h1>
-        <label for="jokebutton">
-            Click to see a random joke
-        </label>
-        <a name="jokebutton" href="/joke">Click here</a>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extend Bootstrap</title>
 
+    <!-- Link to Bootstrap .386 CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0000aa;
+            color: #ffffff;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        h1, h2, h3 {
+            color: #00ffff;
+            text-transform: uppercase;
+        }
+
+        .content-box {
+            border: 2px solid #ffffff;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .content-box h3 {
+            background-color: #008080;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .btn-less {
+            background-color: #33ccff;
+            border: 2px solid #000000;
+            padding: 5px 10px;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-less:hover {
+            background-color: #00ffff;
+            border-color: #ffffff;
+        }
+
+        .nav-item {
+            background-color: #ffcc00;
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        .nav-item a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        #main_head{
+            font-family: "Press Start 2P",system-ui ;
+            font-size: 102;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center mt-4">
+            <h1 id="main_head">HappyFetch</h1>
+            <p>Collecting boredom 🗑️</p>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Components</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Customize</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-box">
+            <h3>Wanna know about jokes?</h3>
+            <p>
+                Explore the library of joke. Not mine ofcourse.
+            </p>
+            <a href="/joke" class="btn-less">Read More</a>
+        </div>
+
+        <div class="content-box">
+            <h3>Why LESS?</h3>
+            <p>
+                Bootstrap compiles 6x faster with LESS compared to Sass.
+                LESS is written in JavaScript, making it easier to dive in and patch.
+            </p>
+        </div>
+
+        <footer class="text-center mt-4">
+            <p>&copy; github.com/ravi-64bit</p>
+        </footer>
+    </div>
+
+    <!-- Link to Bootstrap .386 JavaScript (optional) -->
+    <script src="/js/bootstrap.min.js"></script>
+</body>
 </html>
