@@ -58,7 +58,7 @@ app.get('/numbers',async (req,res)=>{
     var url="https://numbersapi.com/random";
     const response=await fetch(url,{headers:{'Accept':'application/json'}});
     const numberfact=await response.json();
-    console.log(numberfact);
+    res.send(numberfact);
 });
 
 
