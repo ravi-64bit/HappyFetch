@@ -61,6 +61,10 @@ app.get('/numbers',async (req,res)=>{
     res.send(numberfact);
 });
 
+app.use((req,res,next)=>{
+    res.status(404).render('404');
+}
+
 
 //assigning a port
 app.listen('3000',(error)=>{
