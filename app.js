@@ -61,6 +61,15 @@ app.get('/numbers',async (req,res)=>{
     res.send(numberfact);
 });
 
+app.get('/dogs',async (req,res)=>{
+    var input=900;
+    var url="https://dog.ceo/api/breeds/image/random";
+    const response=await fetch(url,{headers:{'Accept':'application/json'}});
+    const dogurl=await response.json();
+    res.render('joke',{type:'dog',joke:dogurl.message});
+});
+
+//render 404 page
 app.use((req,res,next)=>{
     res.status(404).render('404');
 });
